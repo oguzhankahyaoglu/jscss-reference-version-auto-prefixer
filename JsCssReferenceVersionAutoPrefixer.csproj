@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>jscss-reference-version-auto-prefixer</PackageId>
+        <Title>JS CSS Auto Version Prefixer</Title>
+        <Authors>oguzhankahyaoglu</Authors>
+        <Description>This library enables auto prefixing all script/link tags for javascript/css file references</Description>
+        <PackageProjectUrl>https://github.com/oguzhankahyaoglu/jscss-reference-version-auto-prefixer</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/oguzhankahyaoglu/jscss-reference-version-auto-prefixer</RepositoryUrl>
+        <PackageTags>Auto Version Prefixer Javascript Stylesheet</PackageTags>
+        <PackageVersion>1.0.0</PackageVersion>
+        <PackageReleaseNotes>
+		</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
+    </ItemGroup>
+
+</Project>
