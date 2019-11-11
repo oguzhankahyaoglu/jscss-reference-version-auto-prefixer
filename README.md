@@ -11,6 +11,10 @@ converts these references to:
 ```
 
 #Usage
+Firstly, add following line to _ViewImports.cshtml
+```
+@addTagHelper *, JsCssReferenceVersionAutoPrefixer
+```
 On your Startup.cs file; 
 ```
 services.AddJsCssVersionAutoPrefixer() 
