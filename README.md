@@ -19,7 +19,7 @@ On your Startup.cs file;
 ```
 services.AddJsCssVersionAutoPrefixer() 
 ```
-or specifying a versioning function, which would be executed as a singleton function (so it can be something costly :))
+or specifying a versioning function, which **is goind to be executed for every reference** so keep it cheap in terms of performance :)
 ```
 services.AddJsCssVersionAutoPrefixer(() => Guid.NewGuid().ToString()) 
 ```
