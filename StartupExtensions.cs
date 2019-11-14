@@ -14,12 +14,12 @@ namespace JsCssReferenceVersionAutoPrefixer
         /// Output would be like .jss?v={versionNumber}
         /// </summary>
         /// <param name="services"></param>
-        /// <param name="generateVersionSingletonFunc">(Optional) Version generator function</param>
+        /// <param name="generateVersionFunc">(Optional) Version generator function</param>
         public static void AddJsCssVersionAutoPrefixer(this IServiceCollection services,
-            Func<string> generateVersionSingletonFunc = null)
+            Func<string> generateVersionFunc = null)
         {
-            if (generateVersionSingletonFunc != null)
-                VersionTagHelperComponent.VERSION = new Lazy<string>(generateVersionSingletonFunc);
+            VersionTagHelperComponent.VersionFunc = generateVersionFunc
+                ?? VersionTagHelperComponent.GetVersionViaAssemblyLastWriteTime;
             services.AddTransient<ITagHelperComponent, VersionTagHelperComponent>();
         }
     }

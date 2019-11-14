@@ -10,7 +10,7 @@
         <PackageProjectUrl>https://github.com/oguzhankahyaoglu/jscss-reference-version-auto-prefixer</PackageProjectUrl>
         <RepositoryUrl>https://github.com/oguzhankahyaoglu/jscss-reference-version-auto-prefixer</RepositoryUrl>
         <PackageTags>Auto Version Prefixer Javascript Stylesheet</PackageTags>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.1.0</PackageVersion>
         <PackageReleaseNotes>
 		</PackageReleaseNotes>
     </PropertyGroup>

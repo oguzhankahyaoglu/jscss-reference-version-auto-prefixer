@@ -10,7 +10,7 @@ namespace JsCssReferenceVersionAutoPrefixer
 
         public override Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            var versionStr = "?v=" + VERSION.Value;
+            var versionStr = "?v=" + VersionFunc();
             if (string.Equals(context.TagName, "script", StringComparison.OrdinalIgnoreCase))
             {
                 var attr = output.Attributes["src"];
@@ -34,9 +34,9 @@ namespace JsCssReferenceVersionAutoPrefixer
             return Task.CompletedTask;
         }
 
-        internal static Lazy<string> VERSION = new Lazy<string>(GetVersion);
+        internal static Func<string> VersionFunc;
 
-        internal static string GetVersion()
+        internal static string GetVersionViaAssemblyLastWriteTime()
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var fileInfo = new System.IO.FileInfo(assembly.Location);
